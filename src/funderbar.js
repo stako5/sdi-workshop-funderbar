@@ -14,9 +14,9 @@
 // to help guide you toward success in your work on the following exercises.
   _.define = function(input){
     // Declare a variable below that is assigned the value of input;
-    var result = FILL_ME_IN;
+    var result = input;
     // return the above variable
-    return FILL_ME_IN;
+    return result;
   }
 
 //_.dataType is wanting you to determine the data type of what is being passed to it.

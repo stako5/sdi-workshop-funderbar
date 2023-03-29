@@ -67,6 +67,20 @@ The file `src/underbar.js` contains function definitions and explanations for
 the following functions (*italicized functions* are solved for you). Implement
 each of the functions by making all of the tests pass:
 
+## Getting Started
+
+There are a few ways you can start this exercise. 
+  1. You can open the specRunner.html file in your browser of choice.
+
+  2. If you have the `open in browser` extension installed, you can right click specRunner.html and select `open in default browser`.
+
+  3. If you have the `live server` extension installed you can right click specRunner.html and select `open with live server'
+
+Note: Choosing option 1 or 2 means you will have to refres your page each time you update your tests. 
+
+Note: Choosing option 3 your tests page will update each time you save any of the test files or the funderbar.js file. 
+
+
 #### Part I:
 - [ ] identity
 - [ ] *first*

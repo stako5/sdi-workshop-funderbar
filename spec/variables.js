@@ -83,12 +83,17 @@
         expect(_.modulus(1,1)).to.eql(0);
         expect(_.modulus(37, 10)).to.eql(FILL_ME_IN);
         expect(_.modulus(167, 12)).to.eql(FILL_ME_IN);
+        expect(_.modulus(99, 100)).to.eql(FILL_ME_IN);
+        expect(_.modulus(100, 100)).to.eql(FILL_ME_IN);
+        expect(_.modulus(101, 100)).to.eql(FILL_ME_IN);
+        expect(_.modulus(200, 100)).to.eql(FILL_ME_IN);
+        expect(_.modulus(201, 100)).to.eql(FILL_ME_IN);
       });
     });
 
     describe('increment', function() {
 
-      it('should return remainder of the two numbers passed to it', function() {
+      it('should return the the number passed in to it incremented by 1', function() {
         expect(_.increment(1)).to.eql(2);
         expect(_.increment(37)).to.eql(FILL_ME_IN);
         expect(_.increment(167)).to.eql(FILL_ME_IN);
@@ -97,7 +102,7 @@
 
     describe('decrement', function() {
 
-      it('should return remainder of the two numbers passed to it', function() {
+      it('should return the the number passed in to it decremented by 1', function() {
         expect(_.decrement(1)).to.eql(0);
         expect(_.decrement(37)).to.eql(FILL_ME_IN);
         expect(_.decrement(167)).to.eql(FILL_ME_IN);
@@ -106,8 +111,8 @@
 
 
     //Precedence of Evaluation
-    describe('mathcmatical order', function() {
-      //Based on the test passed to _.mathOrder, determind the value of the output.
+    describe('mathematical order', function() {
+      //Based on the test passed to _.mathOrder, determine the value of the output.
       it('determine the outcome based on the equation passed.', function() {
         var test1 = (a,b,c) => a + b * c;
         expect(_.mathOrder(test1(1,2,3))).to.eql(FILL_ME_IN);

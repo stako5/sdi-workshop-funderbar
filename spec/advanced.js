@@ -1,169 +1,206 @@
 (function() {
   'use strict';
 
-  var checkForNativeMethods = function(runUnderbarFunction) {
-    it('should not use the native version of any underbar methods in its implementation', function() {
-      // These spies are set up in testSupport.js
-      runUnderbarFunction();
-      expect(Array.prototype.map.called).to.equal(false);
-      expect(Array.prototype.indexOf.called).to.equal(false);
-      expect(Array.prototype.forEach.called).to.equal(false);
-      expect(Array.prototype.filter.called).to.equal(false);
-      expect(Array.prototype.reduce.called).to.equal(false);
-      expect(Array.prototype.every.called).to.equal(false);
-      expect(Array.prototype.some.called).to.equal(false);
-    });
-  };
+  var FILL_ME_IN = 'Fill this value in';
 
-  describe('Advanced', function() {
+  describe('Part III --- Advanced', function() {
+    //
 
-    describe('invoke, when provided a function reference', function() {
 
-      it('runs the input function on each item in the array, and returns a list of results', function() {
-        var reverse = function() {
-          return this.split('').reverse().join('');
-        };
+    //There is no connecting function in funderbar.js. This is just to test your knowledge of objects. 
+    describe('Object Values', function() {
+      let obj = {
+        firstName : 'Tommy',
+        lastName : 'Oliver',
+        zord : 'Dragon',
+        suit : 'Green',
+        age : 16,
+        inHighSchool : true
+      }
+      it('Access object values using bracket notation ', function() {
+        //Use bracket notation for the FILL_ME_IN portion. 
+        expect(FILL_ME_IN).to.eql('Tommy');
+        expect(FILL_ME_IN).to.eql('Oliver');
+        expect(FILL_ME_IN).to.eql(16);
+      });
 
-        var reversedStrings = _.invoke(['dog', 'cat'], reverse);
-
-        expect(reversedStrings).to.eql(['god', 'tac']);
+      it('Access object values using dot notation ', function() {
+        //Use bracket notation for the FILL_ME_IN portion. 
+        expect(FILL_ME_IN).to.eql('Dragon');
+        expect(FILL_ME_IN).to.eql('Green');
+        expect(FILL_ME_IN).to.eql(true);
       });
 
     });
-
-    describe('invoke, when provided a method name', function() {
-
-      it('runs the specified method on each item in the array, and returns a list of results', function() {
-        var upperCasedStrings = _.invoke(['dog', 'cat'], 'toUpperCase');
-
-        expect(upperCasedStrings).to.eql(['DOG', 'CAT']);
+    
+    //Build the function in funderbar.js
+    describe('Object Creation using Bracket Notation', function() {
+      let firstName = 'Tommy';
+      let lastName = 'Oliver';
+      let petName = 'Dragon';
+      let obj = _.objectCreationBracket(firstName,lastName,petName);
+      it('Create an object using bracket notation', function() {
+        //Use bracket notation for the FILL_ME_IN portion. 
+        expect(FILL_ME_IN).to.eql('Tommy');
+        expect(FILL_ME_IN).to.eql('Oliver');
+        expect(FILL_ME_IN).to.eql('Dragon');
       });
+
     });
-
-    describe('sortBy', function() {
-
-      it('should sort by age', function() {
-        var people = [{name: 'curly', age: 50}, {name: 'moe', age: 30}];
-        people = _.sortBy(people, function(person) {
-          return person.age;
-        });
-
-        expect(_.pluck(people, 'name')).to.eql(['moe', 'curly']);
-      });
-
-      it('should handle undefined values', function() {
-        var list = [undefined, 4, 1, undefined, 3, 2];
-        var result = _.sortBy(list, function(i) { return i; });
-
-        expect(result).to.eql([1, 2, 3, 4, undefined, undefined]);
-      });
-
-      it('should sort by length', function() {
-        var list = ['one', 'two', 'three', 'four', 'five'];
-        var sorted = _.sortBy(list, 'length');
-
-        expect(sorted).to.eql(['one', 'two', 'four', 'five', 'three']);
-      });
-
-      it('should produce results that change the order of the list as little as possible', function() {
-        var Pair = function(x, y) {
-          this.x = x;
-          this.y = y;
-        };
-
-        var collection = [
-          new Pair(1, 1), new Pair(1, 2),
-          new Pair(1, 3), new Pair(1, 4),
-          new Pair(1, 5), new Pair(1, 6),
-          new Pair(2, 1), new Pair(2, 2),
-          new Pair(2, 3), new Pair(2, 4),
-          new Pair(2, 5), new Pair(2, 6),
-          new Pair(undefined, 1), new Pair(undefined, 2),
-          new Pair(undefined, 3), new Pair(undefined, 4),
-          new Pair(undefined, 5), new Pair(undefined, 6)
-        ];
-
-        var actual = _.sortBy(collection, function(pair) {
-          return pair.x;
-        });
-
-        expect(actual).to.eql(collection);
-      });
-    });
-
-    describe('flatten', function() {
-
-      it('can flatten nested arrays', function() {
-        var nestedArray = [1, [2], [3, [[[4]]]]];
-
-        expect(_.flatten(nestedArray)).to.eql([1, 2, 3, 4]);
-      });
-    });
-
-    describe('zip', function() {
-
-      it('should zip together arrays of different lengths', function() {
-        var names = ['moe', 'larry', 'curly'];
-        var ages = [30, 40, 50];
-        var leaders = [true];
-
-        expect(_.zip(names, ages, leaders)).to.eql([
-          ['moe', 30, true],
-          ['larry', 40, undefined],
-          ['curly', 50, undefined]
-        ]);
-      });
-    });
-
-    describe('intersection', function() {
-
-      it('should take the set intersection of two arrays', function() {
-        var stooges = ['moe', 'curly', 'larry'];
-        var leaders = ['moe', 'groucho'];
-
-        expect(_.intersection(stooges, leaders)).to.eql(['moe']);
+    
+    //Build the function in funderbar.js
+    describe('Object Creation using Dot Notation', function() {
+      let firstName = 'Tommy';
+      let lastName = 'Oliver';
+      let petName = 'Dragon';
+      let obj = _.objectCreationDot(firstName,lastName,petName);
+      it('Create an object using dot notation', function() {
+        //Use dot notation for the FILL_ME_IN portion. 
+        expect(FILL_ME_IN).to.eql('Tommy');
+        expect(FILL_ME_IN).to.eql('Oliver');
+        expect(FILL_ME_IN).to.eql('Dragon');
       });
 
     });
 
-    describe('difference', function() {
-
-      it('should return the difference between two arrays', function() {
-        var diff = _.difference([1, 2, 3], [2, 30, 40]);
-
-        expect(diff).to.eql([1, 3]);
+    //Below you will be given an array containing objects. You will need to dig down into the array to access the object and then if necessary use either . notation or [] notation you need to access the proper value. 
+    describe('Array Of Objects', function(){
+      let rangers = [
+        {firstName : 'Tommy',
+        lastName : 'Oliver',
+        suit : 'Green'},
+        {firstName : 'Jason',
+        lastName : 'Lee',
+        suit : 'Red'},
+        {firstName : 'Trini',
+        lastName : 'Kwan',
+        suit : 'Yellow'},
+        {firstName : 'Billy',
+        lastName : 'Cranston',
+        suit : 'Blue'},
+        {firstName : 'Zack',
+        lastName : 'Taylor',
+        suit : 'Black'},
+        {firstName : 'Kimberly',
+        lastName : 'Ann Hart',
+        suit : 'Pink'},
+      ]
+      it('Access the value needed to pass the test', function(){
+        expect(FILL_ME_IN).to.eql({firstName : 'Billy',lastName : 'Cranston',
+        suit : 'Blue'});
+        expect(rangers[4]).to.eql(FILL_ME_IN);
+        expect(rangers[0].firstName).to.eql(FILL_ME_IN);
+        expect(FILL_ME_IN).to.eql('Black');
+        expect(rangers[2].lastName).to.eql(FILL_ME_IN);
+        expect(FILL_ME_IN).to.eql('Red');
+        expect(rangers[5].lastName).to.eql(FILL_ME_IN);
+        expect(FILL_ME_IN).to.eql('Billy');
       });
+    });
 
-      it('should return the difference between three arrays', function() {
-        var result = _.difference([1, 2, 3, 4], [2, 30, 40], [1, 11, 111]);
+    describe('Object Of Objects', function(){
+      let rangers = {
+        green :{firstName : 'Tommy',
+          lastName : 'Oliver',
+          zord : 'Dragon'},
+        red :{firstName : 'Jason',
+          lastName : 'Lee',
+          zord : 'Tyrannosaurus'},
+        yellow : {firstName : 'Trini',
+          lastName : 'Kwan',
+          zord : 'Sabertooth Tiger'},
+        blue : {firstName : 'Billy',
+          lastName : 'Cranston',
+          zord : 'Triceratops'},
+        black : {firstName : 'Zack',
+          lastName : 'Taylor',
+          zord : 'Mastodon'},
+        pink : {firstName : 'Kimberly',
+          lastName : 'Ann Hart',
+          zord : 'Pterodactyl'},
+      }
+      it('Access the value needed to pass the test', function(){
+        //Use dot notation
+        expect(FILL_ME_IN).to.eql({firstName : 'Zack',
+        lastName : 'Taylor',
+        zord : 'Mastodon'});
+        //Use bracket notation
+        expect(FILL_ME_IN).to.eql({firstName : 'Jason',
+        lastName : 'Lee',
+        zord : 'Tyrannosaurus'});
+        //Use dot notation
+        expect(FILL_ME_IN).to.eql('Trini');
+        expect(FILL_ME_IN).to.eql('Dragon');
+        expect(FILL_ME_IN).to.eql('Cranston');
+        //Use bracket notation
+        expect(FILL_ME_IN).to.eql('Ann Hart');
+        expect(FILL_ME_IN).to.eql('Tyrannosaurus');
+        expect(FILL_ME_IN).to.eql('Zack');
+        //Use a combination of dot and bracket notation to pass each test
+        expect(FILL_ME_IN).to.eql('Oliver');
+        expect(FILL_ME_IN).to.eql('Sabertooth Tiger');
+      });
+    });
 
-        expect(result).to.eql([3, 4]);
+    //In funderbar.js build a function that an object and a key then return its value. 
+    describe('Access Object Value using Given Key', function(){
+      let green = {firstName : 'Tommy',
+          lastName : 'Oliver',
+          zord : 'Dragon'}
+      let red = {firstName : 'Jason',
+      lastName : 'Lee',
+      zord : 'Tyrannosaurus'}
+      it("Should return Object's value using given key", function(){
+        expect(_.objectValue(green, 'zord')).to.eql(FILL_ME_IN);
+        expect(_.objectValue(red, 'zord')).to.eql(FILL_ME_IN);
+        expect(_.objectValue(green, 'firstName')).to.eql(FILL_ME_IN);
+        expect(_.objectValue(red, 'firstName')).to.eql(FILL_ME_IN);
+        expect(_.objectValue(FILL_ME_IN)).to.eql('Lee');
+        expect(_.objectValue(FILL_ME_IN)).to.eql('Oliver');
+      })
+    });
+    
+    //Now we are going to ramp things up a bit using for..in and for...of loops
+    //Now is a great time to view the MDN documentation, if you haven't already
+    //Google "JavaScript for of loops" or "Javascript for in loops" and select the result that takes you to Mozilla (MDN Docs), and it will help you under stand udin these loops more. 
+    //You can also go back and review the Learn Content. 
+
+    //Iterate through a given array using for...of loop
+    describe('Looping Arrays using For...Of', function(){
+      let arry = [1,'Javascript',2,45,'Array',34,64,true];
+      it('Should return the sum of all numbers in arry', function(){
+        expect(_.forOf(arry)).to.eql(146);
       });
 
     });
 
-    describe('throttle, when given a wait of 100ms', function() {
-      var callback;
-
-      beforeEach(function() {
-        callback = sinon.spy();
+    //Iterate through an object using for...in loop
+    describe('Looping Arrays using For...in', function(){
+      let obj = {
+        firstName : 'Tommy',
+        lastName : 'Oliver',
+        zord : 'Dragon',
+        suit : 'Green'
+        }
+      it('Should return an array of keys in obj', function(){
+        expect(_.forInKeys(obj)).to.eql(['firstName','lastName','zord','suit']);
       });
-
-
-      it('should return a function callable twice in the first 200ms', function() {
-        var fn = _.throttle(callback, 100);
-        fn(); // called
-        setTimeout(fn, 50);
-        setTimeout(fn, 100); // called
-        setTimeout(fn, 150);
-        setTimeout(fn, 199);
-        clock.tick(200);
-
-        expect(callback).to.have.been.calledTwice;
-      });
-
+      
     });
 
+    describe('Looping Arrays using For...in returning values', function(){
+      let obj = {
+        firstName : 'Tommy',
+        lastName : 'Oliver',
+        zord : 'Dragon',
+        suit : 'Green'
+        }
+      it('Should return an array of keys in obj', function(){
+        expect(_.forInValues(obj)).to.eql(['Tommy','Oliver','Dragon','Green']);
+      });  
+
+    });
+    //END OF PART III
   });
 
 }());

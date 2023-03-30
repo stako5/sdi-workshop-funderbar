@@ -70,7 +70,7 @@
 
     describe('divide', function() {
 
-      it('should return quotent of the two numbers passed to it', function() {
+      it('should return quotient of the two numbers passed to it', function() {
         expect(_.divide(1,1)).to.eql(1);
         expect(_.divide(144, 12)).to.eql(FILL_ME_IN);
         expect(_.divide(65,10)).to.eql(FILL_ME_IN);

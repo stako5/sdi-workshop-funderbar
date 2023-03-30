@@ -4,11 +4,7 @@
   window._ = {};
 
   var FILL_ME_IN = 'Fill this value in';
-/* SCAFFOLDING
-  _.func = function(){
- 
-  }
-*/
+
 //_.define is wanting you to declare a variable, set your variable to the input from the function
 // and then return the variable you just created. This function is nearly completed for you, 
 // to help guide you toward success in your work on the following exercises.
@@ -113,7 +109,7 @@ _.falsyOrTruthy = function(a){
   //In the next tests you will be given four parameters to compare, sort of.
   //You will be given a, b, c, and d. Within your function you will compare 
   //a to b as well as comparing c to d. You will then compare their outcomes with
-  //eachother using the && or || logic to return true or false. 
+  //each other using the && or || logic to return true or false. 
   //EXAMPLE 3 > 2 && 5 === 6
   //The above example will evaluate to False because 3 > 2 === True and 5 === 6 False.
   // And as you learned in the Learn content True && False evaluates to False.
@@ -157,19 +153,21 @@ _.falsyOrTruthy = function(a){
       
     }
 
-    //While looping through the array passed determine the data type of the element. If the element is a number add it to the a variable. At the end return that variable. 
+    //While looping through the array passed determine the data type of the element. If the element is a number add it to a variable. At the end return that variable. 
     _.forIfElseNum = function(a){
       //Code Goes Below
 
     }
 
-    //This function is similar to the above function. Only this time you will be building a sentence rather than a total number. Loop through the array and concatinate the strings in it to make a sentence.
+    //This function is similar to the above function. Only this time you will be building a sentence rather than a total number. Loop through the array and concatenate the strings in it to make a sentence.
     _.forIfElseStr = function(a){
       //Code Goes Below
 
     }
 
-    //In this function you will loop though the passed in array. Prior to that you need to check the second parameter to determine what you will be returning. If the second parameter is 'string' return a sentence created using the strings in the array. If the second parameter is 'number' you will return the total of the number in the array. This fuctions may be considered a CALLBACK to the previous two functions. 
+    //In this function you will loop though the passed in array. Prior to that you need to check the second parameter to determine what you will be returning. 
+    //If the second parameter is 'string' return a sentence created using the strings in the array. If the second parameter is 'number' you will return the total of the number in the array. 
+    //You may notice you did this work already in previous functions but need to combine them in some way. Ideally, you should call the previous two functions in your implementation instead of copy/pasting the 'guts'.
     _.ifElseFor = function(a,b){
       //Code Goes Below
 
@@ -182,14 +180,14 @@ _.falsyOrTruthy = function(a){
 */
 //------------------------------------------------------------------------- 
 
-    //Below you will be building a function that creates an object using bracket notation ([]). Within the fuction create and return an object. 
+    //Below you will be building a function that creates an object using bracket notation ([]). Within the function create and return an object. 
 
     _.objectCreationBracket = (a,b,c) =>{
       //Code Goes Below
 
     }
 
-    //Below you will be building a function that creates an object using dot notation (.). Within the fuction create and return an object. 
+    //Below you will be building a function that creates an object using dot notation (.). Within the function create and return an object. 
 
     _.objectCreationDot = (a,b,c) =>{
       //Code Goes Below
@@ -204,8 +202,8 @@ _.falsyOrTruthy = function(a){
 
     //Below you are going to loop through an array, only this time you need to use a for...of loop rather than an traditional for loop.
     //The tests will be similar to the last time you looped through an array.
-    //What you awill be doing is called refactoring. You take working code and restructure it, either for readability or efficiency, or anyother countless number of reasons.
-    //NOTE: You can also use the same logic in a for...of loop as you would use in a traiditional for loop.
+    //What you will be doing is called refactoring. You take working code and restructure it, either for readability or efficiency, or any other countless number of reasons.
+    //NOTE: You can also use the same logic in a for...of loop as you would use in a traditional for loop.
 
     //Loop through the given array and return the total sum of all the numbers in the array. 
     _.forOf = (a) => {

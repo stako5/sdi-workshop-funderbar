@@ -52,6 +52,7 @@ Some quick notes that may come in handy:
   the execution context for your function call. From inside `myFunction`, you
   can access it as `this`. For this exercise, you can just pass `null` for `context`.
   If you're curious, you can read more in the [documentation for apply](https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Function/apply).
+- Tests whose names begin with **TEST ONLY:** only have the test itself to fix. There is no corresponding code in `funderbar.js`.  
 
 ## Goals
 

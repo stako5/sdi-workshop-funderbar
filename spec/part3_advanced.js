@@ -8,7 +8,7 @@
 
 
     //There is no connecting function in funderbar.js. This is just to test your knowledge of objects. 
-    describe('Object Values', function() {
+    describe('TEST ONLY: Object Values', function() {
       let obj = {
         firstName : 'Tommy',
         lastName : 'Oliver',
@@ -17,14 +17,14 @@
         age : 16,
         inHighSchool : true
       }
-      it('Access object values using bracket notation ', function() {
+      it('TEST ONLY: Access object values using bracket notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
         expect(FILL_ME_IN).to.eql('Tommy');
         expect(FILL_ME_IN).to.eql('Oliver');
         expect(FILL_ME_IN).to.eql(16);
       });
 
-      it('Access object values using dot notation ', function() {
+      it('TEST ONLY: Access object values using dot notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
         expect(FILL_ME_IN).to.eql('Dragon');
         expect(FILL_ME_IN).to.eql('Green');
@@ -41,9 +41,9 @@
       let obj = _.objectCreationBracket(firstName,lastName,petName);
       it('Create an object using bracket notation', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Tommy');
-        expect(FILL_ME_IN).to.eql('Oliver');
-        expect(FILL_ME_IN).to.eql('Dragon');
+        expect(obj[FILL_ME_IN]).to.eql('Tommy');
+        expect(obj[FILL_ME_IN]).to.eql('Oliver');
+        expect(obj[FILL_ME_IN]).to.eql('Dragon');
       });
 
     });
@@ -56,15 +56,15 @@
       let obj = _.objectCreationDot(firstName,lastName,petName);
       it('Create an object using dot notation', function() {
         //Use dot notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Tommy');
-        expect(FILL_ME_IN).to.eql('Oliver');
-        expect(FILL_ME_IN).to.eql('Dragon');
+        expect(obj.FILL_ME_IN).to.eql('Tommy');
+        expect(obj.FILL_ME_IN).to.eql('Oliver');
+        expect(obj.FILL_ME_IN).to.eql('Dragon');
       });
 
     });
 
     //Below you will be given an array containing objects. You will need to dig down into the array to access the object and then if necessary use either . notation or [] notation you need to access the proper value. 
-    describe('Array Of Objects', function(){
+    describe('TEST ONLY: Array Of Objects', function(){
       let rangers = [
         {firstName : 'Tommy',
         lastName : 'Oliver',
@@ -85,7 +85,7 @@
         lastName : 'Ann Hart',
         suit : 'Pink'},
       ]
-      it('Access the value needed to pass the test', function(){
+      it('TEST ONLY: Access the value needed to pass the test', function(){
         expect(FILL_ME_IN).to.eql({firstName : 'Billy',lastName : 'Cranston',
         suit : 'Blue'});
         expect(rangers[4]).to.eql(FILL_ME_IN);
@@ -98,7 +98,7 @@
       });
     });
 
-    describe('Object Of Objects', function(){
+    describe('TEST ONLY: Object Of Objects', function(){
       let rangers = {
         green :{firstName : 'Tommy',
           lastName : 'Oliver',
@@ -119,7 +119,7 @@
           lastName : 'Ann Hart',
           zord : 'Pterodactyl'},
       }
-      it('Access the value needed to pass the test', function(){
+      it('TEST ONLY: Access the value needed to pass the test', function(){
         //Use dot notation
         expect(FILL_ME_IN).to.eql({firstName : 'Zack',
         lastName : 'Taylor',
@@ -142,7 +142,7 @@
       });
     });
 
-    //In funderbar.js build a function that an object and a key then return its value. 
+    //In funderbar.js build a function that has an object and a key then return its value. 
     describe('Access Object Value using Given Key', function(){
       let green = {firstName : 'Tommy',
           lastName : 'Oliver',
@@ -151,7 +151,7 @@
       lastName : 'Lee',
       zord : 'Tyrannosaurus'}
       it("Should return Object's value using given key", function(){
-        expect(_.objectValue(green, 'zord')).to.eql(FILL_ME_IN);
+        expect(_.objectValue(green, 'zord')).to.eql('Dragon');
         expect(_.objectValue(red, 'zord')).to.eql(FILL_ME_IN);
         expect(_.objectValue(green, 'firstName')).to.eql(FILL_ME_IN);
         expect(_.objectValue(red, 'firstName')).to.eql(FILL_ME_IN);

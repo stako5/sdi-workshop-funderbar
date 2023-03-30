@@ -113,6 +113,7 @@
     //Precedence of Evaluation
     describe('mathematical order', function() {
       //Based on the test passed to _.mathOrder, determine the value of the output.
+      //Feel free to use a calculator if necessary to solve the problem in the correct order. 
       it('determine the outcome based on the equation passed.', function() {
         var test1 = (a,b,c) => a + b * c;
         expect(_.mathOrder(test1(1,2,3))).to.eql(FILL_ME_IN);

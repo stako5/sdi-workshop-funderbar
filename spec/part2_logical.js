@@ -8,7 +8,7 @@
    
     describe('same', function() {
 
-      it('are the paramaters equal ', function() {
+      it('are the parameters equal ', function() {
         //replace FILL_ME_IN with true or false
         expect(_.same(1,1)).to.equal(true);
         expect(_.same('string','string')).to.equal(FILL_ME_IN);
@@ -79,7 +79,7 @@
         
         expect(_.ifLogic(band, 'Queen')).to.equal('Great');
         expect(_.ifLogic(band, 'queen')).to.equal(undefined);
-        expect(_.ifLogic(band, 'Metalica')).to.equal(undefined);
+        expect(_.ifLogic(band, 'Metallica')).to.equal(undefined);
       });
       
     });
@@ -87,7 +87,7 @@
     describe('If Else Logic', function() {
       var movie = "John Wick"
 
-      it("should return 'Great' if movie and second parameter match", function() {
+      it("should return 'Great' if movie and second parameter match, 'Good' otherwise", function() {
         
         expect(_.ifElseLogic(movie, 'John Wick')).to.equal('Great');
         expect(_.ifElseLogic(movie, 'Happy Feet')).to.equal('Good');
@@ -100,9 +100,9 @@
     //example expect(array[index].to.eql(value))
     //Ensure you replace FILL_ME_IN with the proper information
     //There is no function connected in funderbar.js
-    describe('Array Values', function() { 
+    describe('TEST ONLY: Array Values', function() { 
       let arry = [1,'Javascript',2,45,'Array',34,64,true];
-      it("Access the Array's Values", function(){
+      it("TEST ONLY: Access the Array's Values", function(){
         expect(FILL_ME_IN).to.eql(1);
         expect(FILL_ME_IN).to.eql(true);
         expect(FILL_ME_IN).to.eql('Array');
@@ -119,13 +119,13 @@
     //example expect(array[index].to.eql(value))
     //Ensure you replace FILL_ME_IN with the proper information
     //There is no function connected in funderbar.js
-    describe('Array Matrix', function() { 
+    describe('TEST ONLY: Array Matrix', function() { 
       let arryMtrx = [
         [1,2,3],
         [4,5,6],
         [7,8,9]
       ];
-      it('Access the Array\'s Values', function(){
+      it('TEST ONLY: Access the Array\'s Values', function(){
         expect(FILL_ME_IN).to.eql(1);
         expect(FILL_ME_IN).to.eql(9);
         expect(FILL_ME_IN).to.eql(5);
@@ -148,13 +148,18 @@
     });
 
     describe('Nested For Loops', function() {
+      let testArray = [ 
+        [0, 1], 
+        [2, 3]
+      ];
+
       let arryMtrx = [
         [1,2,3],
         [4,5,6],
         [7,8,9]
       ];
       it("should return a sum of all numbers in the array matrix", function() {
-        
+        expect(_.nestedForLoop(testArray)).to.equal(6);
         expect(_.nestedForLoop(arryMtrx)).to.equal(FILL_ME_IN);
       });
       

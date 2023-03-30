@@ -15,8 +15,8 @@
     return FILL_ME_IN;
   }
 
-//_.dataType is wanting you to determine the data type of what is being passed to it.
-// Return the datatype of input: ie. String or number or boolean etc. 
+//_.dataType is wanting you to determine the data type of what is being passed into it.
+// Return the datatype of input: ie. string or number or boolean etc. 
 _.dataType = function(input){
   //Code Goes Below
 
@@ -31,6 +31,8 @@ _.sum = function(a,b){
 //_.subtract takes two numbers as parameters and returns their difference
 _.subtract = function(a,b){
   //Code Goes Below
+  //For your code remember to subtract b from a
+  //a - b
   
 }
 
@@ -40,14 +42,14 @@ _.multiply = function(a,b){
   
 }
 
-//_.divide takes two numbers as parameters and returns their quotent
+//_.divide takes two numbers as parameters and returns their quotient
 _.divide = function(a,b){
   //Code Goes Below
   
 }
 
-//_.modulus takes two numbers as parameters and returns their remainder of a divided by b
-_.modulus = function(a,b){
+//_.remainderOperator takes two numbers as parameters and returns their remainder of a divided by b
+_.remainderOperator = function(a,b){
   //Code Goes Below
   
 }
@@ -111,18 +113,18 @@ _.falsyOrTruthy = function(a){
   //a to b as well as comparing c to d. You will then compare their outcomes with
   //each other using the && or || logic to return true or false. 
   //EXAMPLE 3 > 2 && 5 === 6
-  //The above example will evaluate to False because 3 > 2 === True and 5 === 6 False.
-  // And as you learned in the Learn content True && False evaluates to False.
+  //The above example will evaluate to False because 3 > 2 === True and 5 === 6 False,
+  // as you learned in the Learn content True && False evaluates to False.
   //For the _.andand function as well as the _.oror function you will just be using the === comparator
 
-  //_.andand will be using the && comparator
-  _.andand = function(a,b,c,d) {
+  //_.andAnd will be using the && comparator
+  _.andAnd = function(a,b,c,d) {
   //Code Goes Below
   
   }
 
-    //_.oror will be using the || comparator
-    _.oror = function(a,b,c,d) {
+    //_.orOr will be using the || comparator
+    _.orOr = function(a,b,c,d) {
       //Code Goes Below
       
       }
@@ -154,12 +156,14 @@ _.falsyOrTruthy = function(a){
     }
 
     //While looping through the array passed determine the data type of the element. If the element is a number add it to a variable. At the end return that variable. 
+    //If there are no numbers in the array being passed into the function return "No numbers to add"
     _.forIfElseNum = function(a){
       //Code Goes Below
 
     }
 
     //This function is similar to the above function. Only this time you will be building a sentence rather than a total number. Loop through the array and concatenate the strings in it to make a sentence.
+    //If there are no strings in the array being passed into the function return "Strings needed to make a sentence"
     _.forIfElseStr = function(a){
       //Code Goes Below
 

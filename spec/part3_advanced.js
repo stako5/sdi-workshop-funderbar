@@ -3,11 +3,12 @@
 
   var FILL_ME_IN = 'Fill this value in';
 
-  describe('Part III --- Advanced', function() {
+  describe('Part III --- ADVANCED', function() {
     //
 
 
     //There is no connecting function in funderbar.js. This is just to test your knowledge of objects. 
+    //You will are given an object that will be used to access the data needed for the test to pass. 
     describe('TEST ONLY: Object Values', function() {
       let obj = {
         firstName : 'Tommy',
@@ -168,7 +169,7 @@
     //Iterate through a given array using for...of loop
     describe('Looping Arrays using For...Of', function(){
       let arry = [1,'Javascript',2,45,'Array',34,64,true];
-      it('Should return the sum of all numbers in arry', function(){
+      it('Should return the sum of all numbers in an array', function(){
         expect(_.forOf(arry)).to.eql(146);
       });
 

@@ -43,7 +43,7 @@
         //replace FILL_ME_IN with true or false
         expect(_.falsyOrTruthy(0)).to.equal(false);
         expect(_.falsyOrTruthy(undefined)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy(1)).to.eqaul(FILL_ME_IN);
+        expect(_.falsyOrTruthy(1)).to.equal(FILL_ME_IN);
         expect(_.falsyOrTruthy(NaN)).to.equal(FILL_ME_IN);
         expect(_.falsyOrTruthy("")).to.equal(FILL_ME_IN);
       });
@@ -53,10 +53,14 @@
 
       it('should return true or false', function() {
         //replace FILL_ME_IN with true or false
-        expect(_.andand(1,1,'string','string')).to.equal(true);
-        expect(_.andand(33,23,true,false)).to.equal(FILL_ME_IN);
-        expect(_.andand(undefined,NaN,'learn','learn')).to.equal(FILL_ME_IN);
-        expect(_.andand(false,"", 0, undefined )).to.equal(FILL_ME_IN);
+        //The tests will compare the first two parameters resulting in true or false
+        //It will also compare the last two for the same
+        //Then finally it will compare the outcome of the previous tow comparisons using the logical and
+        expect(_.andAnd(1,1,'string','string')).to.equal(true);
+        //1 is equal to 1 resulting in true. 'string' is equal to 'string' resulting in true. If the first and the second are true then you will get true as a result.
+        expect(_.andAnd(33,23,true,false)).to.equal(FILL_ME_IN);
+        expect(_.andAnd(undefined,NaN,'learn','learn')).to.equal(FILL_ME_IN);
+        expect(_.andAnd(false,"", 0, undefined )).to.equal(FILL_ME_IN);
       });
     }); 
 
@@ -64,10 +68,14 @@
 
       it('should return true or false', function() {
         //replace FILL_ME_IN with true or false
-        expect(_.oror(1,1,'string','string')).to.equal(true);
-        expect(_.oror(33,23,true,false)).to.equal(FILL_ME_IN);
-        expect(_.oror(undefined,NaN,'learn','learn')).to.equal(FILL_ME_IN);
-        expect(_.oror(false,"", 0, undefined )).to.equal(FILL_ME_IN);
+        //The tests will compare the first two parameters resulting in true or false
+        //It will also compare the last two for the same
+        //Then finally it will compare the outcome of the previous tow comparisons using the logical or
+        expect(_.orOr(1,1,'string','string')).to.equal(true);
+        //1 is equal to 1 resulting in true. 'string' is equal to 'string' resulting in true. If the first or the second is true then you will get true as a result.
+        expect(_.orOr(33,23,true,false)).to.equal(FILL_ME_IN);
+        expect(_.orOr(undefined,NaN,'learn','learn')).to.equal(FILL_ME_IN);
+        expect(_.orOr(false,"", 0, undefined )).to.equal(FILL_ME_IN);
       });
       
     }); 
@@ -92,6 +100,17 @@
         expect(_.ifElseLogic(movie, 'John Wick')).to.equal('Great');
         expect(_.ifElseLogic(movie, 'Happy Feet')).to.equal('Good');
         expect(_.ifElseLogic(movie, 'Air Bud')).to.equal('Good');
+      });
+      
+    });
+
+    describe('For Loops', function() {
+
+      it("should return a single string or a sum of numbers", function() {
+        
+        expect(_.forLoop(['Coding ', 'is ', 'the ', 'best!'])).to.equal('Coding is the best!');
+        expect(_.forLoop(['I ', 'got ', 'this!'])).to.equal('I got this!');
+        expect(_.forLoop([1,2,3,4,5])).to.equal(FILL_ME_IN);
       });
       
     });
@@ -136,16 +155,6 @@
 
     });
     
-    describe('For Loops', function() {
-
-      it("should return a single string or a sum of numbers", function() {
-        
-        expect(_.forLoop(['Coding ', 'is ', 'the ', 'best!'])).to.equal('Coding is the best!');
-        expect(_.forLoop(['I ', 'got ', 'this!'])).to.equal('I got this!');
-        expect(_.forLoop([1,2,3,4,5])).to.equal(FILL_ME_IN);
-      });
-      
-    });
 
     describe('Nested For Loops', function() {
       let testArray = [ 
@@ -169,7 +178,7 @@
 
       it("Should return total of all numbers in the array.", function() {
         
-        expect(_.forIfElseNum(['Coding ', 'is ', 'the ', 'best!'])).to.equal(0);
+        expect(_.forIfElseNum(['Coding ', 'is ', 'the ', 'best!'])).to.equal("No numbers to add");
         expect(_.forIfElseNum(['I ',2, 'got ',3, 'this!'])).to.equal(5);
         expect(_.forIfElseNum([1,2,3,4,5])).to.equal(15);
       });
@@ -182,7 +191,7 @@
         
         expect(_.forIfElseStr(['Coding ', 'is ', 'the ', 'best!'])).to.equal('Coding is the best!');
         expect(_.forIfElseStr(['I ',2, 'got ',3, 'this!'])).to.equal('I got this!');
-        expect(_.forIfElseStr([1,2,3,4,5])).to.equal('');
+        expect(_.forIfElseStr([1,2,3,4,5])).to.equal('Strings needed to make a sentence');
       });
       
     });

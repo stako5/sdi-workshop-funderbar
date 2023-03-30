@@ -4,22 +4,6 @@
   var FILL_ME_IN = 'Fill this value in';
 
 
-  /*
-  SCAFFOLDING
-      describe('FUNC NAME', function() {
-
-      it('DESCRIBE WHAT SHOULD HAPPEN', function() {
-        var CREATE = {};
-        expect(_.FUNC(input)).to.equal(result);
-        expect(_.FUNC(input)).to.eql(result);
-        expect(_.FUNC(false)).to.be.false;
-        expect(FUNC).to.not.exist;
-        expect(FUNC).to.not.equal(result);
-
-      });
-    });
-  */
-
   describe('Part I --- VARIABLES', function() {
 
     describe('define', function() {
@@ -43,7 +27,7 @@
 
     describe('sum', function() {
 
-      it('should return sum of the two numbers passed to it', function() {
+      it('should return sum of the two numbers passed into it', function() {
         expect(_.sum(1,1)).to.eql(2);
         expect(_.sum(33, 150)).to.eql(183);
         expect(_.sum(10,-5)).to.eql(FILL_ME_IN);
@@ -51,8 +35,9 @@
     });
 
     describe('subtract', function() {
-
-      it('should return difference of the two numbers passed to it', function() {
+      //For the tests ensure you are subtracting the second parameter from the first
+      //_.subtract(a,b) === a - b
+      it('should return difference of the two numbers passed into it', function() {
         expect(_.subtract(1,1)).to.eql(0);
         expect(_.subtract(222, 62)).to.eql(FILL_ME_IN);
         expect(_.subtract(10,-5)).to.eql(FILL_ME_IN);
@@ -61,7 +46,7 @@
 
     describe('multiply', function() {
 
-      it('should return product of the two numbers passed to it', function() {
+      it('should return product of the two numbers passed into it', function() {
         expect(_.multiply(1,1)).to.eql(1);
         expect(_.multiply(11, 5)).to.eql(FILL_ME_IN);
         expect(_.multiply(10,-2)).to.eql(FILL_ME_IN);
@@ -70,24 +55,24 @@
 
     describe('divide', function() {
 
-      it('should return quotient of the two numbers passed to it', function() {
+      it('should return quotient of the two numbers passed into it', function() {
         expect(_.divide(1,1)).to.eql(1);
         expect(_.divide(144, 12)).to.eql(FILL_ME_IN);
         expect(_.divide(65,10)).to.eql(FILL_ME_IN);
       });
     });
 
-    describe('modulus', function() {
+    describe('remainderOperator', function() {
 
-      it('should return remainder of the two numbers passed to it', function() {
-        expect(_.modulus(1,1)).to.eql(0);
-        expect(_.modulus(37, 10)).to.eql(FILL_ME_IN);
-        expect(_.modulus(167, 12)).to.eql(FILL_ME_IN);
-        expect(_.modulus(99, 100)).to.eql(FILL_ME_IN);
-        expect(_.modulus(100, 100)).to.eql(FILL_ME_IN);
-        expect(_.modulus(101, 100)).to.eql(FILL_ME_IN);
-        expect(_.modulus(200, 100)).to.eql(FILL_ME_IN);
-        expect(_.modulus(201, 100)).to.eql(FILL_ME_IN);
+      it('should return remainderOperator of the two numbers passed into it', function() {
+        expect(_.remainderOperator(1,1)).to.eql(0);
+        expect(_.remainderOperator(37, 10)).to.eql(FILL_ME_IN);
+        expect(_.remainderOperator(167, 12)).to.eql(FILL_ME_IN);
+        expect(_.remainderOperator(99, 100)).to.eql(FILL_ME_IN);
+        expect(_.remainderOperator(100, 100)).to.eql(FILL_ME_IN);
+        expect(_.remainderOperator(101, 100)).to.eql(FILL_ME_IN);
+        expect(_.remainderOperator(200, 100)).to.eql(FILL_ME_IN);
+        expect(_.remainderOperator(201, 100)).to.eql(FILL_ME_IN);
       });
     });
 
@@ -112,7 +97,7 @@
 
     //Precedence of Evaluation
     describe('mathematical order', function() {
-      //Based on the test passed to _.mathOrder, determine the value of the output.
+      //Based on the test passed into _.mathOrder, determine the value of the output.
       //Feel free to use a calculator if necessary to solve the problem in the correct order. 
       it('determine the outcome based on the equation passed.', function() {
         var test1 = (a,b,c) => a + b * c;

@@ -52,7 +52,7 @@ _.divide = function(a,b){
 //_.remainderOperator takes two numbers as parameters and returns their remainder of a divided by b
 _.remainderOperator = function(a,b){
   //Code Goes Below
-  
+  //return the remainder of a divided by b
 }
 
 //_.increment takes a number as a parameter and increces it by 1
@@ -116,7 +116,7 @@ _.falsyOrTruthy = function(a){
   //EXAMPLE 3 > 2 && 5 === 6
   //The above example will evaluate to False because 3 > 2 === True and 5 === 6 False,
   // as you learned in the Learn content True && False evaluates to False.
-  //For the _.andand function as well as the _.oror function you will just be using the === comparator
+  //For the _.andAnd function as well as the _.oror function you will just be using the === comparator
 
   //_.andAnd will be using the && comparator
   _.andAnd = function(a,b,c,d) {

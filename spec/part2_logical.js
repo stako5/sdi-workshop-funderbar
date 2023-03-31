@@ -106,7 +106,7 @@
 
     describe('For Loops', function() {
 
-      it("should return a single string or a sum of numbers", function() {
+      it("should return a single string", function() {
         
         expect(_.forLoop(['Coding ', 'is ', 'the ', 'best!'])).to.equal('Coding is the best!');
         expect(_.forLoop(['I ', 'got ', 'this!'])).to.equal('I got this!');

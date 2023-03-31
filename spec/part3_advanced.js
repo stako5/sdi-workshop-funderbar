@@ -38,8 +38,8 @@
     describe('Object Creation using Bracket Notation', function() {
       let firstName = 'Tommy';
       let lastName = 'Oliver';
-      let petName = 'Dragon';
-      let obj = _.objectCreationBracket(firstName,lastName,petName);
+      let zord = 'Dragon';
+      let obj = _.objectCreationBracket(firstName,lastName,zord);
       it('Create an object using bracket notation', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
         expect(obj[FILL_ME_IN]).to.eql('Tommy');
@@ -53,8 +53,8 @@
     describe('Object Creation using Dot Notation', function() {
       let firstName = 'Tommy';
       let lastName = 'Oliver';
-      let petName = 'Dragon';
-      let obj = _.objectCreationDot(firstName,lastName,petName);
+      let zord = 'Dragon';
+      let obj = _.objectCreationDot(firstName,lastName,zord);
       it('Create an object using dot notation', function() {
         //Use dot notation for the FILL_ME_IN portion. 
         expect(obj.FILL_ME_IN).to.eql('Tommy');

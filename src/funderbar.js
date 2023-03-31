@@ -45,6 +45,7 @@ _.multiply = function(a,b){
 //_.divide takes two numbers as parameters and returns their quotient
 _.divide = function(a,b){
   //Code Goes Below
+  //a divided by b
   
 }
 

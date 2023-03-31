@@ -157,14 +157,14 @@ _.falsyOrTruthy = function(a){
     }
 
     //While looping through the array passed determine the data type of the element. If the element is a number add it to a variable. At the end return that variable. 
-    //If there are no numbers in the array being passed into the function return "No numbers to add"
+    //If an index in the array is not a number add 1 to the above mentioned variable
     _.forIfElseNum = function(a){
       //Code Goes Below
 
     }
 
     //This function is similar to the above function. Only this time you will be building a sentence rather than a total number. Loop through the array and concatenate the strings in it to make a sentence.
-    //If there are no strings in the array being passed into the function return "Strings needed to make a sentence"
+    //If an index in the array is not a string add and empty string ("") to the local variable
     _.forIfElseStr = function(a){
       //Code Goes Below
 
@@ -213,6 +213,7 @@ _.falsyOrTruthy = function(a){
     //Loop through the given array and return the total sum of all the numbers in the array. 
     _.forOf = (a) => {
       //Code Goes Below
+      
     }
 
     //Loop through the given object and return an array of keys from the object. 

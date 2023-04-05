@@ -1,9 +1,9 @@
-# underbarRedux
+# FUNDERBAR
 Reduced version of underbar.
 
-# usaf-sdi-underbar
+# sdi-workshop-funderbar
 
-# Underbar
+# FUNDERBAR
 
 This project was written in the same spirit as
 [JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans), and thusly
@@ -64,7 +64,7 @@ The files in the `spec` directory contain the test suites. Your goal is to get a
 the tests to pass by implementing the missing functions. Run all the tests by
 opening `SpecRunner.html` in your browser.
 
-The file `src/underbar.js` contains function definitions and explanations for
+The file `src/funderbar.js` contains function definitions and explanations for
 the following functions (*italicized functions* are solved for you). Implement
 each of the functions by making all of the tests pass:
 

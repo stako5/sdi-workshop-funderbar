@@ -16,7 +16,7 @@ Funderbar is different from Underbar in the way that it focuses primarialy on Va
 
 # Objectives
 * Implement functions and methods using classic and modern JS
-* Identify higher order functions and use for solutions
+* Employ debugging strategies for troubleshooting
 * Interact with teammates through utilizing soft skills
 
 

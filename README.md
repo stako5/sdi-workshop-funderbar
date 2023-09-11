@@ -19,7 +19,6 @@ Funderbar is different from Underbar in the way that it focuses primarialy on Va
 * Identify higher order functions and use for solutions
 * Interact with teammates through utilizing soft skills
 
-## Links and Resources
 
 Some quick notes that may come in handy:
 
@@ -37,17 +36,6 @@ the following functions (*italicized functions* are solved for you). Implement
 each of the functions by making all of the tests pass:
 ## Goals
 
-As is, the repository is missing code for most of the functions. It's your job
-to fix the library by implementing them. The functions are split in two sections,
-with a separate test suite for each.
-
-The files in the `spec` directory contain the test suites. Your goal is to get all
-the tests to pass by implementing the missing functions. Run all the tests by
-opening `SpecRunner.html` in your browser.
-
-The file `src/funderbar.js` contains function definitions and explanations for
-the following functions (*italicized functions* are solved for you). Implement
-each of the functions by making all of the tests pass:
 
 ## Getting Started
 

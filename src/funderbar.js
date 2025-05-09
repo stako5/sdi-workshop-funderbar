@@ -97,7 +97,7 @@ _.greater = function(a,b){
   
 }
 
-//_.greater takes two numbers as parameters and checks if a is less than b
+//_.lessThan takes two numbers as parameters and checks if a is less than b
 _.lessThan = function(a,b){
   //Code Goes Below
   

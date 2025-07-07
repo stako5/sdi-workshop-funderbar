@@ -11,9 +11,9 @@
       it('are the parameters equal ', function() {
         //replace FILL_ME_IN with true or false
         expect(_.same(1,1)).to.equal(true);
-        expect(_.same('string','string')).to.equal(FILL_ME_IN);
-        expect(_.same(13,true)).to.equal(FILL_ME_IN);
-        expect(_.same(false, undefined)).to.equal(FILL_ME_IN);
+        expect(_.same('string','string')).to.equal(true);
+        expect(_.same(13,true)).to.equal(false);
+        expect(_.same(false, undefined)).to.equal(false);
       });
     });
 
@@ -22,8 +22,8 @@
       it('is the first parameter greater than the second', function() {
         //replace FILL_ME_IN with true or false
         expect(_.greater(1,1)).to.equal(false);
-        expect(_.greater(37,12)).to.equal(FILL_ME_IN);
-        expect(_.greater(167,167)).to.equal(FILL_ME_IN);
+        expect(_.greater(37,12)).to.equal(true);
+        expect(_.greater(167,167)).to.equal(false);
       });
     });
 
@@ -32,8 +32,8 @@
       it('is the first parameter less than the second', function() {
         //replace FILL_ME_IN with true or false        
         expect(_.lessThan(1,1)).to.equal(false);
-        expect(_.lessThan(37, 88)).to.equal(FILL_ME_IN);
-        expect(_.lessThan(167,144)).to.equal(FILL_ME_IN);
+        expect(_.lessThan(37, 88)).to.equal(true);
+        expect(_.lessThan(167,144)).to.equal(false);
       });
     });
 
@@ -42,10 +42,10 @@
       it('is the input Truthy or Falsy', function() {
         //replace FILL_ME_IN with true or false
         expect(_.falsyOrTruthy(0)).to.equal(false);
-        expect(_.falsyOrTruthy(undefined)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy(1)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy(NaN)).to.equal(FILL_ME_IN);
-        expect(_.falsyOrTruthy("")).to.equal(FILL_ME_IN);
+        expect(_.falsyOrTruthy(undefined)).to.equal(false);
+        expect(_.falsyOrTruthy(1)).to.equal(true);
+        expect(_.falsyOrTruthy(NaN)).to.equal(false);
+        expect(_.falsyOrTruthy("")).to.equal(false);
       });
     }); 
 
@@ -58,9 +58,9 @@
         //Then finally it will compare the outcome of the previous tow comparisons using the logical and
         expect(_.andAnd(1,1,'string','string')).to.equal(true);
         //1 is equal to 1 resulting in true. 'string' is equal to 'string' resulting in true. If the first and the second are true then you will get true as a result.
-        expect(_.andAnd(33,23,true,false)).to.equal(FILL_ME_IN);
-        expect(_.andAnd(undefined,NaN,'learn','learn')).to.equal(FILL_ME_IN);
-        expect(_.andAnd(false,"", 0, undefined )).to.equal(FILL_ME_IN);
+        expect(_.andAnd(33,23,true,false)).to.equal(false);
+        expect(_.andAnd(undefined,NaN,'learn','learn')).to.equal(false);
+        expect(_.andAnd(false,"", 0, undefined )).to.equal(false);
       });
     }); 
 
@@ -73,9 +73,9 @@
         //Then finally it will compare the outcome of the previous tow comparisons using the logical or
         expect(_.orOr(1,1,'string','string')).to.equal(true);
         //1 is equal to 1 resulting in true. 'string' is equal to 'string' resulting in true. If the first or the second is true then you will get true as a result.
-        expect(_.orOr(33,23,true,false)).to.equal(FILL_ME_IN);
-        expect(_.orOr(undefined,NaN,'learn','learn')).to.equal(FILL_ME_IN);
-        expect(_.orOr(false,"", 0, undefined )).to.equal(FILL_ME_IN);
+        expect(_.orOr(33,23,true,false)).to.equal(false);
+        expect(_.orOr(undefined,NaN,'learn','learn')).to.equal(true);
+        expect(_.orOr(false,"", 0, undefined )).to.equal(true);
       });
       
     }); 
@@ -110,7 +110,7 @@
         
         expect(_.forLoop(['Coding ', 'is ', 'the ', 'best!'])).to.equal('Coding is the best!');
         expect(_.forLoop(['I ', 'got ', 'this!'])).to.equal('I got this!');
-        expect(_.forLoop([1,2,3,4,5])).to.equal(FILL_ME_IN);
+        expect(_.forLoop([1,2,3,4,5])).to.equal('12345');
       });
       
     });
@@ -122,11 +122,11 @@
     describe('TEST ONLY: Array Values', function() { 
       let arry = [1,'Javascript',2,45,'Array',34,64,true];
       it("TEST ONLY: Access the Array's Values", function(){
-        expect(FILL_ME_IN).to.eql(1);
-        expect(FILL_ME_IN).to.eql(true);
-        expect(FILL_ME_IN).to.eql('Array');
-        expect(FILL_ME_IN).to.eql('Javascript');
-        expect(FILL_ME_IN).to.eql(undefined);
+        expect(arry[0]).to.eql(1);
+        expect(arry[7]).to.eql(true);
+        expect(arry[4]).to.eql('Array');
+        expect(arry[1]).to.eql('Javascript');
+        expect(arry[9]).to.eql(undefined);
       });
 
     });
@@ -145,12 +145,12 @@
         [7,8,9]
       ];
       it('TEST ONLY: Access the Array\'s Values', function(){
-        expect(FILL_ME_IN).to.eql(1);
-        expect(FILL_ME_IN).to.eql(9);
-        expect(FILL_ME_IN).to.eql(5);
-        expect(FILL_ME_IN).to.eql(4);
-        expect(FILL_ME_IN).to.eql(8);
-        expect(FILL_ME_IN).to.eql(2);
+        expect(arryMtrx[0][0]).to.eql(1);
+        expect(arryMtrx[2][2]).to.eql(9);
+        expect(arryMtrx[1][1]).to.eql(5);
+        expect(arryMtrx[1][0]).to.eql(4);
+        expect(arryMtrx[2][1]).to.eql(8);
+        expect(arryMtrx[0][1]).to.eql(2);
       });
 
     });
@@ -169,7 +169,7 @@
       ];
       it("should return a sum of all numbers in the array matrix", function() {
         expect(_.nestedForLoop(testArray)).to.equal(6);
-        expect(_.nestedForLoop(arryMtrx)).to.equal(FILL_ME_IN);
+        expect(_.nestedForLoop(arryMtrx)).to.equal(45);
       });
       
     });

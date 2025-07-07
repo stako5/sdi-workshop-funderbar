@@ -20,16 +20,16 @@
       }
       it('TEST ONLY: Access object values using bracket notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Tommy');
-        expect(FILL_ME_IN).to.eql('Oliver');
-        expect(FILL_ME_IN).to.eql(16);
+        expect(obj['firstName']).to.eql('Tommy');
+        expect(obj['lastName']).to.eql('Oliver');
+        expect(obj['age']).to.eql(16);
       });
 
       it('TEST ONLY: Access object values using dot notation ', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(FILL_ME_IN).to.eql('Dragon');
-        expect(FILL_ME_IN).to.eql('Green');
-        expect(FILL_ME_IN).to.eql(true);
+        expect(obj.zord).to.eql('Dragon');
+        expect(obj.suit).to.eql('Green');
+        expect(obj.inHighSchool).to.eql(true);
       });
 
     });
@@ -42,9 +42,9 @@
       let obj = _.objectCreationBracket(firstName,lastName,zord);
       it('Create an object using bracket notation', function() {
         //Use bracket notation for the FILL_ME_IN portion. 
-        expect(obj[FILL_ME_IN]).to.eql('Tommy');
-        expect(obj[FILL_ME_IN]).to.eql('Oliver');
-        expect(obj[FILL_ME_IN]).to.eql('Dragon');
+        expect(obj['firstName']).to.eql('Tommy');
+        expect(obj['lastName']).to.eql('Oliver');
+        expect(obj['zord']).to.eql('Dragon');
       });
 
     });
@@ -57,9 +57,9 @@
       let obj = _.objectCreationDot(firstName,lastName,zord);
       it('Create an object using dot notation', function() {
         //Use dot notation for the FILL_ME_IN portion. 
-        expect(obj.FILL_ME_IN).to.eql('Tommy');
-        expect(obj.FILL_ME_IN).to.eql('Oliver');
-        expect(obj.FILL_ME_IN).to.eql('Dragon');
+        expect(obj.firstName).to.eql('Tommy');
+        expect(obj.lastName).to.eql('Oliver');
+        expect(obj.zord).to.eql('Dragon');
       });
 
     });
@@ -87,10 +87,9 @@
         suit : 'Pink'},
       ]
       it('TEST ONLY: Access the value needed to pass the test', function(){
-        expect(FILL_ME_IN).to.eql({firstName : 'Billy',lastName : 'Cranston',
-        suit : 'Blue'});
-        expect(rangers[4]).to.eql(FILL_ME_IN);
-        expect(rangers[0].firstName).to.eql(FILL_ME_IN);
+        expect(rangers[3].firstName.lastName.suit).to.eql({firstName : 'Billy',lastName : 'Cranston', suit : 'Blue'});
+        expect(rangers[4]).to.eql('Zack', 'Taylor', 'Black');
+        expect(rangers[0].firstName).to.eql('Tommy');
         expect(FILL_ME_IN).to.eql('Black');
         expect(rangers[2].lastName).to.eql(FILL_ME_IN);
         expect(FILL_ME_IN).to.eql('Red');
@@ -153,11 +152,11 @@
       zord : 'Tyrannosaurus'}
       it("Should return Object's value using given key", function(){
         expect(_.objectValue(green, 'zord')).to.eql('Dragon');
-        expect(_.objectValue(red, 'zord')).to.eql(FILL_ME_IN);
-        expect(_.objectValue(green, 'firstName')).to.eql(FILL_ME_IN);
-        expect(_.objectValue(red, 'firstName')).to.eql(FILL_ME_IN);
-        expect(_.objectValue(FILL_ME_IN)).to.eql('Lee');
-        expect(_.objectValue(FILL_ME_IN)).to.eql('Oliver');
+        expect(_.objectValue(red, 'zord')).to.eql('Tyrannosaurus');
+        expect(_.objectValue(green, 'firstName')).to.eql('Tommy');
+        expect(_.objectValue(red, 'firstName')).to.eql('Jason');
+        expect(_.objectValue(red, 'lastName')).to.eql('Lee');
+        expect(_.objectValue(green, 'lastName')).to.eql('Oliver');
       })
     });
     
@@ -186,7 +185,6 @@
       it('Should return an array of keys in obj', function(){
         expect(_.forInKeys(obj)).to.eql(['firstName','lastName','zord','suit']);
       });
-      
     });
 
     describe('Looping Arrays using For...in returning values', function(){
